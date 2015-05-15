@@ -4,12 +4,7 @@
 
 <body>
   <H3>HelloRepository by VVergara <small> Write an e-mail</small><H3>
-      <address>
-         <strong>Vito Vergara</strong><br>
-          Via Roma, 4000<br>
-          Torino, CAP 59030<br>
-          <abbr title="Cellulare">Cell:</abbr> (+39) 328-36-999-77
-      </address>
+      
       
  <form>
   <div class="form-group">
@@ -32,7 +27,12 @@
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
  </form>
-      
+      <address>
+         <strong>Vito Vergara</strong><br>
+          Via Roma, 4000<br>
+          Torino, CAP 59030<br>
+          <abbr title="Cellulare">Cell:</abbr> (+39) 328-36-999-77
+      </address>
 </body>
   
 </html>
