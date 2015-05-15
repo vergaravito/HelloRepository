@@ -3,8 +3,11 @@
     <body>
       <H3>HelloRepository by VVergara<H3>
   
-      <form action="" method="">
-        <input type="text" placeholder="Inserisci nome">
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="text" placeholder="Inserisci nome">
+          
+        </div>
         <button type="submit" class="btn btn-primary">Invia!</button>
       </form>
       
