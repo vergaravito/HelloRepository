@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" ><!--<![endif]-->
+<html ng-app>
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prova Bootstrap</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+  <link href="css/stili-custom.css" rel="stylesheet" media="screen">
+
+  <script src="js/modernizr.custom.js"></script>
+  <!-- respond.js per IE8 -->
+  <!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ <!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script> -->
+  <script>
+  	function inviaMail(){
+	  var ret = controlla();
+	  var nome = document.getElementById("nome").value;
+	  var ogg = document.getElementById("ogg").value;
+	  var txt = document.getElementById("txt").value;
+	  if(ret!=0){
+		var divNome = document.getElementById("nome_mitt");
+		divNome.class="form-group has-success";
+		divNome.className="form-group has-success";
+		location.href = "mailto:vergara.vito@gmail.com?subject="+nome+"->"+ogg+"&body="+txt;
+		alert("Caricamento ...");
+		}
+	  else{
+		var divNome = document.getElementById("nome_mitt");
+		divNome.class="form-group has-error";
+		divNome.className="form-group has-error";
+		alert("Attenzione, inserire il Nome!");
+		}
+	  return;
+	}
+	function controlla(){
+	  var nome = document.getElementById("nome");
+	  if ((nome.value=="")||(nome.value==null)){
+		return 0;
+	  }
+	  return 1;
+	}
+  </script>
+	 <script src="http://code.jquery.com/jquery.js"></script>
+	 <script src="js/bootstrap.min.js"></script>
+ </head>
+ <body style="background-color:#8181F7;">
+
+ <div>
+    <h1>Ciao, Simone! <small> Inviami un'e-Mail</small></h1>
+ </div>
+
+ <div style="width:100%; height:70%; background-color:#E6E6E6;">
+<br>
+  <form>
+   <div id="grp_mail" class="form-group" style="max-width:400px;">
+    <div id="nome_mitt" class="form-group">
+     <label class="control-label" for="nome">Nome: </label>
+      <input type="text" class="form-control" id="nome" placeholder="Il Tuo nome"/>
+    </div>
+     <label class="control-label" for="ogg">Oggetto: </label>
+      <input type="text" class="form-control" id="ogg" placeholder="Oggetto"/><br>
+     <label class="control-label" for="txt">Testo: </label>
+      <textarea type="text" class="form-control" id="txt" placeholder="Testo" rows="5"></textarea>
+   </div>
+   <button type="button" class="btn btn-primary" onClick="javascript:inviaMail();">Invia!</button>
+	<br><br>
+  </form>
+ </div>
+ 
+ <div style="width:100%; height:20%; background-color:#848484;">
+	<br>
+  <address>
+    <strong>Vito Vergara</strong><br>
+    Via Enrico de Nicola 3/8<br>
+    Bagno a Ripoli (FI), 50012<br>
+    <abbr title="Telefono Cellulare">Cell:</abbr> 328 3699977
+  </address>
+	<br>
+ </div>
+ 
+</body>
+</html>
